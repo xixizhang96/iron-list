@@ -19,46 +19,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2.0.0/webcomponents-loader.js"></script>
 </head>
 
 <body>
+  <script type="module">
+    import { PolymerElement, html } from '@polymer/polymer';
+    import '@polymer/iron-list/iron-list.js';
 
-  <dom-module id="x-list">
-    <template>
+    class SampleElement extends PolymerElement {
+      static get template() {
+        return html`
       <style>
-        iron-list {
-          @apply --layout-fit;
+        :host {
+          display: block;
         }
 
-        .item {
-          padding: 10px;
-          border-bottom: 1px solid #ccc;
+        iron-list {
+          height: 100vh; /* don't use % values unless the parent element is sized. */
         }
       </style>
-      <iron-ajax url="data/contacts.json" last-response="{{items}}" auto></iron-ajax>
-      <iron-list items="[[items]]" as="item">
+      <iron-list items="[[items]]">
         <template>
-          <div class="item">
-            <b>#[[index]] - [[item.index]] - [[item.name]]</b>
-            <p>[[item.longText]]</p>
+          <div>
+            ...
           </div>
         </template>
       </iron-list>
-    </template>
-    <script type="module">
-      import '@polymer/polymer/polymer-legacy.js';
-      import '@polymer/iron-flex-layout/iron-flex-layout.js';
-      import '@polymer/iron-ajax/iron-ajax.js';
-      import '../iron-list.js';
-      import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
-      Polymer({ is: 'x-list' });
-    </script>
-  </dom-module>
-
-  <x-list></x-list>
-
+    `;
+      }
+    }
+    customElements.define('sample-element', SampleElement);
+  </script>
 </body>
 
 </html>

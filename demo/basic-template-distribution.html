@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!doctype html>
 <html>
+
 <head>
 
   <title>iron-list demo</title>
@@ -20,14 +21,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2.0.0/webcomponents-loader.js"></script>
-  
+
   <style>
-    body, html {
+    body,
+    html {
       margin: 0;
     }
   </style>
 
 </head>
+
 <body>
 
   <dom-module id="x-list">
@@ -51,10 +54,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       import '@polymer/iron-flex-layout/iron-flex-layout.js';
       import '@polymer/iron-ajax/iron-ajax.js';
       import '../iron-list.js';
-      import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
+      import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
       Polymer({
         is: 'x-list',
-        properties: {items: Array, as: {type: String, value: 'item'}},
+        properties: { items: Array, as: { type: String, value: 'item' } },
       });
     </script>
   </dom-module>
@@ -87,12 +90,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       import '@polymer/iron-flex-layout/iron-flex-layout.js';
       import '@polymer/iron-ajax/iron-ajax.js';
       import '../iron-list.js';
-      import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
-      Polymer({is: 'x-example'});
+      import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+      Polymer({ is: 'x-example' });
     </script>
   </dom-module>
 
   <x-example></x-example>
 
 </body>
+
 </html>

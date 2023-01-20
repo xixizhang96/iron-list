@@ -15,6 +15,7 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@polymer/app-layout": "^3.0.0-pre.26",
+    "@polymer/gen-typescript-declarations": "^1.5.1",
     "@polymer/iron-ajax": "^3.0.0-pre.26",
     "@polymer/iron-flex-layout": "^3.0.0-pre.26",
     "@polymer/iron-icon": "^3.0.0-pre.26",
@@ -31,8 +32,7 @@
     "@polymer/test-fixture": "^4.0.1",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "wct-browser-legacy": "^1.0.1",
-    "webmat": "^0.2.1",
-    "@polymer/gen-typescript-declarations": "^1.5.1"
+    "webmat": "^0.2.1"
   },
   "scripts": {
     "format": "webmat",
@@ -43,9 +43,10 @@
   "main": "iron-list.js",
   "author": "The Polymer Authors",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
-    "@polymer/iron-resizable-behavior": "^3.0.0-pre.26",
     "@polymer/iron-a11y-keys-behavior": "^3.0.0-pre.26",
-    "@polymer/iron-scroll-target-behavior": "^3.0.0-pre.26"
+    "@polymer/iron-list": "^3.1.0",
+    "@polymer/iron-resizable-behavior": "^3.0.0-pre.26",
+    "@polymer/iron-scroll-target-behavior": "^3.0.0-pre.26",
+    "@polymer/polymer": "^3.0.0"
   }
 }
